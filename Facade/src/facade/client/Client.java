@@ -11,7 +11,7 @@ import facade.FileFacade;
 public class Client {
     public static void main(String[] args){
     String filePath = "test.txt";
-    String originalContent = "Ejemplo de Facade trabajo de modelos blblbl";
+    String originalContent = "¡Hola, patrón facade en Java! blblb";
     
     FileFacade facade = FileFacade.getInstance();
     
