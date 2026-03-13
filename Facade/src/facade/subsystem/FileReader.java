@@ -8,10 +8,19 @@ package facade.subsystem;
  *
  * @author JUANCA
  */
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.IOException;
+
 public class FileReader {
     public String read(String fileName){
-        System.out.print("Leyendo el archivo:" + fileName);
-        
-        return "Contenido recuperado del archivo";
+        try{
+            // Lee los bytes y los pasa a string
+            System.out.println("Leyendo este archivo: " + fileName);
+            return new String(Files.readAllBytes(Paths.get(fileName)));
+        }catch (IOException e){
+            System.err.println("Error leyendo el archivo" + e.getMessage());
+            return"";
+        }    
     }
 }
