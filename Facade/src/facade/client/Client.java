@@ -13,15 +13,14 @@ public class Client {
     String filePath = "test.txt";
     String originalContent = "¡Hola, patrón facade en Java! blblb";
     
-    FileFacade facade = FileFacade.getInstance();
+    Facade facade = Facade.getInstance();
     
-    System.out.println(" iniciando la escritura");
+    System.out.println("\n iniciando la escritura");
     facade.writeEncryptedFile(filePath, originalContent);
     
     System.out.println("\n Iniciando lectura");
     
-    
     String result = facade.readDecryptedFile(filePath);
-    System.out.println("\n Cliente:" + result);
+    System.out.println("\n Contenido mostrado al cliente:) + result);
     }
 }
